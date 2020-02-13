@@ -1,0 +1,45 @@
+package input;
+
+import java.io.File;
+
+public class FileSinifi {
+
+	private File dosya;
+	static int dosyaSayisi=0;
+	
+	public FileSinifi(final String DosyaYolu) {
+		dosyaSayisi++;
+		dosya = new File(DosyaYolu);
+	}
+	
+	public void dosyaOlustur() throws Exception{
+		if(!dosya.exists())				//	dosya varlýgýný kontrol eder.
+			dosya.createNewFile();		//	dosya olusturur.
+	}
+	
+	public String dosyaAdi() {
+		return dosya.getName();
+	}
+	
+	public String dosyaYolu() {
+		return dosya.getAbsolutePath();
+	}
+	
+	public void dosyaSil() {
+		if(dosya.exists())
+		{
+			dosya.delete();
+			System.out.println("Dosya Silindi.");
+		}
+		else
+		{
+			System.out.println("Dosya Yok !");
+		}
+			
+
+		
+	}
+	
+	
+	
+}

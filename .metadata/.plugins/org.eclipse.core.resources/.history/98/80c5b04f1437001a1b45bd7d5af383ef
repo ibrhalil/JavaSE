@@ -1,0 +1,67 @@
+package kareHareket;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+import javax.swing.JPanel;
+
+@SuppressWarnings("serial")
+public class Ekran extends JPanel implements KeyListener, ActionListener {
+	Graphics g;
+	Kare k;
+	private int x, y, w, h;
+	int hiz = 10;
+
+	public Ekran(int pX, int pY) {
+		super();
+		setSize(pX, pY);
+		setBackground(Color.MAGENTA);
+		this.h = 30;
+		this.w = getWidth() / 6;
+		this.x = (getWidth() / 2) - (w / 2);
+		this.y = getHeight() - h - 40;
+		System.out.println("ekran olustu");
+	}
+
+	@Override
+	protected void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		k = new Kare(x, y, w, h);
+		k.ciz(g);
+		System.out.println("ekran ciz");
+	}
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+
+		System.out.println(e.getKeyCode());
+		if (e.getKeyCode() == 37) {
+			k.hareketSol(hiz);
+		}
+		if (e.getKeyCode() == 39) {
+			k.hareketSag(hiz, getWidth());
+		}
+		repaint();
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

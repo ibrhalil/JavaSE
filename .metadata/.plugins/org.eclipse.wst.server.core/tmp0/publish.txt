@@ -1,0 +1,6 @@
+#Tomcat publish data
+#Thu Jan 23 15:28:21 EET 2020
+org.eclipse.jst.jee.server\:MavenProjeSpringBoot=C\:\\Users\\H.ibrahim\\Documents\\Servers\\apache-tomcat-8.5.50\\wtpwebapps\\MavenProjeSpringBoot
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\H.ibrahim\\.m2\\repository\\org\\springframework\\spring-web\\4.3.13.RELEASE\\spring-web-4.3.13.RELEASE.jar=C\:\\Users\\H.ibrahim\\Documents\\Servers\\apache-tomcat-8.5.50\\wtpwebapps\\MavenProjeSpringBoot\\WEB-INF\\lib\\spring-web-4.3.13.RELEASE.jar
+org.eclipse.jst.jee.server\:Z01DynamicWebProject=C\:\\Users\\H.ibrahim\\Documents\\Servers\\apache-tomcat-8.5.50\\wtpwebapps\\Z01DynamicWebProject
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\H.ibrahim\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-websocket\\8.5.23\\tomcat-embed-websocket-8.5.23.jar=C\:\\Users\\H.ibrahim\\Documents\\Servers\\apache-tomcat-8.5.50\\wtpwebapps\\MavenProjeSpringBoot\\WEB-INF\\lib\\tomcat-embed-websocket-8.5.23.jar

@@ -1,0 +1,24 @@
+package object_serialization;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+
+public class NesneDeSerilestirme {
+
+	public static void main(String[] args) {
+		
+		File dosya = new File("bilgiler.txt");
+		if(dosya.exists())
+		{
+			FileInputStream fis = new FileInputStream(dosya);
+			ObjectInputStream ois = ObjectInputStream(fis);
+		}
+		else
+		{
+			System.out.println("dosya bulunamadý.");
+		}
+
+	}
+
+}

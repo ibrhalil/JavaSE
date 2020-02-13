@@ -1,0 +1,69 @@
+package input;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		//	File Sýnýfýný Kullanarak Dosya Oluþturma
+		String dosyaAdi = "metin.txt";
+		new File("File Kontrol").mkdir();
+		FileSinifi dosya1 = new FileSinifi("File Kontrol\\"+dosyaAdi);
+		
+		try 
+		{
+			dosya1.dosyaOlustur();
+			dosya1.dosyaOzellikleriListele();
+		} 
+		catch (Exception e) 
+		{
+			
+			e.printStackTrace();
+		}
+		
+		
+		
+		//	FileInputStream hem File türü dosya ile oluþtururuz hemde String türü ile oluþturabiliriz
+		try 
+		{
+			FileInputStream dosya2 = new FileInputStream(dosya1.getFile());
+			
+			System.out.println(dosya2.read());			//ASCII Kodu olarak Görünür.
+			System.out.println((char)dosya2.read());	//char ile karaktere cevirdik
+			System.out.println((char)dosya2.read());	//her okumada okuma imleci bir sonraki karakterin baþýna geçmektedir.
+			
+			dosya2.skip(5);								//5. indise atladýk
+			
+			int secici;
+			
+			System.out.println("Tümü Listele\n");
+			while ((secici=dosya2.read())!=-1) 			//dosyada okudugumuz veri kaybetmemek için bir deðiþkene atarýz,-1 okunacak deger yok anlamýna gelir
+			{
+				System.out.print((char)secici);
+			}
+			
+
+			
+			FileInputStream dosya3 = new FileInputStream("File Kontrol\\metin.txt");
+			
+			int gezici=0;
+			while(gezici!=-1)
+			{
+				gezici = dosya3.read();
+				System.out.println((char)gezici);
+			}
+			
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+
+}

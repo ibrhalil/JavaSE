@@ -1,0 +1,45 @@
+package jpanel;
+
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.Timer;
+
+public class SuDamlasi extends JPanel implements ActionListener {
+	int x, y, gen, yuk;
+
+	public SuDamlasi(int pX, int pY) {
+		JFrame pencere = new JFrame("Su Damlasý");
+		pencere.add(this);
+		pencere.setSize(pX, pY);
+		x = pencere.getWidth();
+		y = pencere.getHeight();
+		gen = yuk = 75;
+		pencere.setVisible(true);
+		pencere.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		Timer time = new Timer(60, this);
+		time.start();
+	}
+
+	public static void main(String[] args) {
+		new SuDamlasi(600, 400);
+
+	}
+
+	@Override
+	protected void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		g.drawOval(x, y, gen, yuk);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		gen += 3;
+		yuk += 3;
+		
+		repaint();
+	}
+}

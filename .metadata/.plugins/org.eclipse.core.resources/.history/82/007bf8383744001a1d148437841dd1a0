@@ -1,0 +1,18 @@
+package generic_metot;
+
+public class Main {
+
+	public static void main(String[] args) {
+		String[] liste1 = new String[4];
+		Integer[] liste2 =new Integer[4];
+		Character[] liste3 = new Character[4];
+		
+		
+		
+		Yazdir.yazdir(liste1);
+		Yazdir.yazdir(liste2);
+		Yazdir.yazdir(liste3);
+
+	}
+
+}

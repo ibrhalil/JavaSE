@@ -1,0 +1,19 @@
+package generic_metot;
+
+import java.util.ArrayList;
+import java.util.Stack;
+
+public class Main {
+
+	public static void main(String[] args) {
+		String[] liste1 = new String[4];
+		int[] liste2 =new int[4];
+		Character[] liste3 = new Character[4];
+		
+		
+		
+		Yazdir.yazdir(liste1);
+
+	}
+
+}

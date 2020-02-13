@@ -1,0 +1,13 @@
+package ilk;
+
+public class Final {
+	private final int a;
+	
+	public Final(int a) {
+		this.a=a;
+	}
+	
+	public void metodTest() {
+		System.out.println("test metodu çalýþtý");
+	}
+}

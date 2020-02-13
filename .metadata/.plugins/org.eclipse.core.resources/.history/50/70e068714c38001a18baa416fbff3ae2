@@ -1,0 +1,15 @@
+package ilk;
+
+public class Test extends Final{
+
+	public Test(int a) {
+		super(a);
+	}
+
+	public static void main(String[] args) {
+		new Test(6);
+		new Test(7);
+
+	}
+
+}

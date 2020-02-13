@@ -1,0 +1,26 @@
+package dosya_okuma_byte;
+
+import java.io.File;
+
+public class DosyaOkumaYazma {
+
+	public static void main(String[] args) {
+
+		//byte bazlý okuma yazma
+		
+		File dosya = new File("D:\\Beni Oku.txt");
+		
+			try 
+			{
+				if(!dosya.exists())
+					dosya.createNewFile();
+			}
+			catch (Exception e) 
+			{
+				e.printStackTrace();
+			}
+		
+
+	}
+
+}

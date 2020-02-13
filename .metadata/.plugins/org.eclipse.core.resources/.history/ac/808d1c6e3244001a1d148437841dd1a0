@@ -1,0 +1,12 @@
+package generic_sinif;
+
+
+public class Listele<E> {
+
+	void listele(E[] liste)
+	{
+		for (E item : liste) {
+			System.out.println(item);
+		}
+	}
+}

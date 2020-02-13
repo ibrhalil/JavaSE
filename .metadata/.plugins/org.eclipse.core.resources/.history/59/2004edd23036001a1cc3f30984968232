@@ -1,0 +1,34 @@
+package jpanel;
+
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class SuDamlasi extends JPanel implements ActionListener
+{
+	public SuDamlasi(int pX,int pY) {
+		JFrame pencere = new JFrame("Su Damlasý");
+		pencere.add(this);
+		pencere.setSize(pX,pY);
+		pencere.setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		new SuDamlasi(600, 400);
+	}
+	
+	@Override
+	protected void paintComponent(Graphics g) {
+		// TODO Auto-generated method stub
+		super.paintComponent(g);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+}

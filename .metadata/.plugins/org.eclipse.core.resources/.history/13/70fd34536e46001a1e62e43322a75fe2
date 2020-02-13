@@ -1,0 +1,42 @@
+package dosya_okuma_byte;
+
+import java.io.File;
+import java.io.FileInputStream;
+
+public class DosyaOkumaYazma {
+
+	public static void main(String[] args) {
+
+		//byte bazlý okuma yazma
+		
+		File dosya = new File("D:\\Deneme\\Beni Oku.txt");
+		new File("D:\\Deneme").mkdir();
+			try 
+			{
+				if(!dosya.exists())
+					dosya.createNewFile();
+				
+				FileInputStream oku = new FileInputStream(dosya);
+				
+				byte[] dizi = new byte[(int) dosya.length()];
+				
+				oku.read(dizi);
+				
+				String yazilan = new String(dizi);
+				
+				System.out.println(yazilan);
+				
+				
+				
+				
+				
+			}
+			catch (Exception e) 
+			{
+				e.printStackTrace();
+			}
+		
+
+	}
+
+}

@@ -1,0 +1,9 @@
+package ilk;
+
+public class Final {
+	private final int a;
+	
+	public Final(int a) {
+		this.a=a;
+	}
+}

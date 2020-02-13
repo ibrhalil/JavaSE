@@ -1,0 +1,73 @@
+package object_serialization;
+
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
+
+public class Externalizable implements java.io.Externalizable {
+
+	private String ad;
+	private int yas;
+	private long maas;
+	public Externalizable(String ad,int yas,long maas) {
+		setAd(ad);
+		setYas(yas);
+		setMaas(maas);
+	}
+	public String getAd() {
+		return ad;
+	}
+	public void setAd(String ad) {
+		this.ad = ad;
+	}
+	public int getYas() {
+		return yas;
+	}
+	public void setYas(int yas) {
+		this.yas = yas;
+	}
+	public long getMaas() {
+		return maas;
+	}
+	public void setMaas(long maas) {
+		this.maas = maas;
+	}
+
+	
+	
+	@Override
+	public String toString() {
+		return "Externalizable [ad = " + ad + " , yas = " + yas + " , maas = " + maas + " ]";
+	}	
+	
+	@Override
+	public void writeExternal(ObjectOutput yazdir)  {
+		
+		
+		
+		try {
+			yazdir.writeObject(this.ad);
+			yazdir.writeObject(this.yas);
+			
+		} catch (Exception e) {
+			System.out.println("writeExternal hata \n   "+e.toString());
+		}
+		
+	}
+	@Override
+	public void readExternal(ObjectInput oku) {
+		
+		
+		try {
+			this.ad=(String) oku.readObject();
+			this.yas=(int) oku.readObject();
+			
+		} catch (Exception e) {
+			System.out.println("readExternal hata \n   "+e.toString());
+		}
+		
+	}
+
+	
+	
+
+}

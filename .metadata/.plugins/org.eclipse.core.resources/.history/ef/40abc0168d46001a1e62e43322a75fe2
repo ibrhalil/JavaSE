@@ -1,0 +1,13 @@
+package input;
+
+import java.io.File;
+
+public class Main {
+
+	public static void main(String[] args) {
+		new File("File Kontrol").mkdir();
+		FileSinifi dosya1 = new FileSinifi("\\");
+
+	}
+
+}

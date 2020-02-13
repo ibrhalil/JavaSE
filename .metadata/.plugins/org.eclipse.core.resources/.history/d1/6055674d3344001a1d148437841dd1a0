@@ -1,0 +1,13 @@
+package generic_sinif;
+
+import java.util.ArrayList;
+
+public class Listele<E> {
+
+	void listele(ArrayList<E> liste)
+	{
+		for (E item : liste) {
+			System.out.println(item);
+		}
+	}
+}
